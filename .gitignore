@@ -2,3 +2,4 @@
 *.mp3
 *.png
 !outsample.png
+*.pyc 
