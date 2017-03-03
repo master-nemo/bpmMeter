@@ -35,7 +35,7 @@ def processArgs(verose=False):
     else:
         aparser.add_argument('fln',             help='filename (wav or mp3 or any known by ffmpeg)')
     
-    #%%%
+    
     if npy.isRunFromIDE():
         args = aparser.parse_args(['Testfile2.mp3 '])
     else:
@@ -95,6 +95,7 @@ def ShowFFTFragmentTo(maxHz=5,dxtick=0.2):
     #nolof=5
     #nolof=8
     nolof=minHz/df
+    nolof=int(nolof)
     npy.mplssz(11,7)
     #npy.mplssz(11,7)
     plt.plot(ff[nolof:nv],f1a[nolof:nv],"*-g")
